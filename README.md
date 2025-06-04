@@ -142,6 +142,3 @@ Visit the app at:
 
 ---
 
-## 📧 Contact / Support
-
-For issues or questions, open an issue or contact the maintainer.
