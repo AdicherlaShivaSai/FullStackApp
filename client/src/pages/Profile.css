@@ -1,0 +1,88 @@
+/* Profile Page Styles */
+.profile {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.basicInfo {
+  background-color: #f4f6f8;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.basicInfo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.basicInfo button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.basicInfo button:hover {
+  background-color: #0056b3;
+}
+
+/* Posts List */
+.listOfPosts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.post:hover {
+  background-color: #f9f9f9;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.body {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.username {
+  font-style: italic;
+  color: #888;
+}
+
+.buttons label {
+  font-weight: bold;
+  color: #333;
+}

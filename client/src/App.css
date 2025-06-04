@@ -1,0 +1,179 @@
+
+
+
+.App {
+  text-align: center;
+}
+
+/* Posts.css */
+
+.postContainer {
+  max-width: 700px;
+  width: 100%;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.post {
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 6px solid #007bff;
+}
+
+.post:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.post:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.post:nth-child(1) {
+  border-left-color: #e74c3c;
+}
+.post:nth-child(2) {
+  border-left-color: #f39c12;
+}
+.post:nth-child(3) {
+  border-left-color: #2ecc71;
+}
+.post:nth-child(4) {
+  border-left-color: #3498db;
+}
+
+
+
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.body {
+  font-size: 16px;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.footer {
+  font-size: 14px;
+  color: #888;
+  text-align: right;
+  font-style: italic;
+}
+
+.footer::before {
+  content: '●';
+  color: #3498db;
+  margin-right: 6px;
+}
+
+.footer .username {
+  flex: 50%;
+}
+.footer .buttons {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.likeButton {
+  color: red
+}
+.unlikeButton {
+  color: lightcoral
+}
+
+.buttons label {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+
+/* Navbar.css */
+
+.navbar {
+  background-color: #007bff;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 1000px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #dbeeff;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    margin: 6px 0;
+  }
+}
+
+.navbar button {
+  background-color: #ff4d4f; /* red-ish for logout */
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #d9363e; /* darker red on hover */
+}
+
+.navbar h3 {
+  margin-left: auto;
+  margin-right: 15px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #fff; /* white for dark navbar, adjust if needed */
+  display: flex;
+  align-items: center;
+}
+
