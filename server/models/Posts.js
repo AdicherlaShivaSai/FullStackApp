@@ -13,15 +13,23 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
-    Posts.associate = (models) => {
-        Posts.hasMany(models.Comments, {
-            onDelete: 'cascade'
-        });
-        Posts.hasMany(models.Likes, {
-            onDelete: 'cascade'
-        });
-    }
 
-    return Posts;
-}
+  Posts.associate = (models) => {
+    Posts.hasMany(models.Comments, {
+      onDelete: "cascade",
+    });
+    Posts.hasMany(models.Likes, {
+      onDelete: "cascade",
+    });
 
+    // ✅ THIS is the missing part — links Posts to Users
+    Posts.belongsTo(models.Users, {
+      foreignKey: {
+        allowNull: false, // or true, depending on your logic
+      },
+      onDelete: "CASCADE",
+    });
+  };
+
+  return Posts;
+};
