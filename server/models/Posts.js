@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     // ✅ THIS is the missing part — links Posts to Users
     Posts.belongsTo(models.Users, {
       foreignKey: {
+        name: "UserId", // This should match the foreign key in your Users model
         allowNull: false, // or true, depending on your logic
       },
       onDelete: "CASCADE",
