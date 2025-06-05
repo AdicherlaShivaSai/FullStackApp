@@ -21,5 +21,14 @@ module.exports = (sequelize, DataTypes) => {
             onDelete: 'cascade'
         });
     }
+    Posts.belongsTo(Users, {
+          foreignKey: {
+            name: 'fk_user_id', // <- give it a unique name
+            allowNull: true
+          },
+          onDelete: 'CASCADE',
+          onUpdate: 'CASCADE'
+        });
+
     return Posts;
 }
