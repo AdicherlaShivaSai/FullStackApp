@@ -13,11 +13,11 @@ function Profile() {
     const { authState } = useContext(AuthContext); // Uncomment if you want to use AuthContext
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/auth/basicInfo/${id}`).then((response) => {
+        axios.get(`https://fullstackapp-y9y6.onrender.com/auth/basicInfo/${id}`).then((response) => {
             setUsername(response.data.username);
         })
 
-        axios.get(`http://localhost:3001/posts/byUserId/${id}`).then((response) => {
+        axios.get(`https://fullstackapp-y9y6.onrender.com/posts/byUserId/${id}`).then((response) => {
             // Handle the list of posts if needed
             setListOfPosts(response.data);
         })

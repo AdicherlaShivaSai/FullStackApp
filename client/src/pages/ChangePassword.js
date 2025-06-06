@@ -11,7 +11,7 @@ function ChangePassword() {
     const [oldPassword, setOldPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
     const changePassword = () => {
-        axios.put("http://localhost:3001/auth/changepassword", {
+        axios.put("https://fullstackapp-y9y6.onrender.com/auth/changepassword", {
             oldPassword: oldPassword,
             newPassword: newPassword
         }, {
