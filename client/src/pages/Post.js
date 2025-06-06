@@ -14,11 +14,11 @@ function Post() {
     let navigate = useNavigate();
 
     useEffect(() => {
-    axios.get(`http://localhost:3001/posts/byId/${id}`).then((response) => {
+    axios.get(`https://fullstackapp-y9y6.onrender.com/posts/byId/${id}`).then((response) => {
         setPostObject(response.data);
     })
 
-    axios.get(`http://localhost:3001/comments/${id}`).then((response) => {
+    axios.get(`https://fullstackapp-y9y6.onrender.com/comments/${id}`).then((response) => {
         setCommentList(response.data);
     });
 
@@ -26,7 +26,7 @@ function Post() {
 
     const addComment = () => {
         axios
-        .post('http://localhost:3001/comments', {
+        .post('https://fullstackapp-y9y6.onrender.com/comments', {
             commentBody: newComment,
             PostId: id,
         },
@@ -52,7 +52,7 @@ function Post() {
 
     const deleteComment = (id) => {
     axios
-      .delete(`http://localhost:3001/comments/${id}`, {
+      .delete(`https://fullstackapp-y9y6.onrender.com/comments/${id}`, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then(() => {
@@ -65,7 +65,7 @@ function Post() {
   };
 
   const deletePost = (id) => {
-    axios.delete(`http://localhost:3001/posts/${id}`, {
+    axios.delete(`https://fullstackapp-y9y6.onrender.com/posts/${id}`, {
       headers: { accessToken: localStorage.getItem("accessToken") },
     })
   }
@@ -73,7 +73,7 @@ function Post() {
   const editPost = (option) => {
     if(option === 'title'){
         let newTitle = prompt("Enter new title:");
-        axios.put('http://localhost:3001/posts/title', {
+        axios.put('https://fullstackapp-y9y6.onrender.com/posts/title', {
             newTitle: newTitle,
             id: postObject.id,
         }, {
@@ -86,7 +86,7 @@ function Post() {
     }
     else{
         let newPostText = prompt("Enter new post text:");
-        axios.put('http://localhost:3001/posts/postText', {
+        axios.put('https://fullstackapp-y9y6.onrender.com/posts/postText', {
             newText: newPostText,
             id: postObject.id,
         }, {

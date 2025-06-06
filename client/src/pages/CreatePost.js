@@ -28,7 +28,7 @@ function CreatePost() {
             onSubmit={(values, { setSubmitting }) => {
             // Handle form submission logic here
 
-            axios.post('http://localhost:3001/posts', values, {
+            axios.post('https://fullstackapp-y9y6.onrender.com/posts', values, {
                 headers: {accessToken: localStorage.getItem("accessToken")}})
                 .then((response) => {
                 // setListOfPosts(response.values);

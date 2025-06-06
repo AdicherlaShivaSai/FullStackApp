@@ -16,7 +16,7 @@ function Login() {
             username: username,
             password: password
         };
-        axios.post('http://localhost:3001/auth/login', data).then((response) => {
+        axios.post('https://fullstackapp-y9y6.onrender.com/auth/login', data).then((response) => {
           if(response.data.error) alert(response.data.error);
           else{
           localStorage.setItem('accessToken', response.data.accessToken);

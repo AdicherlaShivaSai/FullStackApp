@@ -19,7 +19,7 @@ function Register() {
             })}
             onSubmit={(data, { setSubmitting }) => {
             // Handle form submission logic here
-            axios.post('http://localhost:3001/auth', data).then((response) => {
+            axios.post('https://fullstackapp-y9y6.onrender.com/auth', data).then((response) => {
                 console.log(response.data);
                 navigate('/'); // Redirect to home page after successful post creation
             });
