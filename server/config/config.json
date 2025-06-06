@@ -1,5 +1,5 @@
 {
-  "development": {
+  "production": {
     "username": "root",
     "password": "password",
     "database": "TutorialDB",
@@ -13,7 +13,7 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "production": {
+  "development": {
     "username": "uo8iigutfvyl2zsl",
     "password": Oi07TPHNUG4vbBawJUIn,
     "database": "bicemom7mxtge9wn3kng",
